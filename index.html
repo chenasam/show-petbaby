@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>秀寶貝 - 到府寵物按摩與芳療 | 寵物健康生活顧問 張靈汝</title>
     
-<meta property="og:title" content="秀寶貝 - 到府寵物按摩與芳療">
-<meta property="og:description" content="毛香御手職人手法，專業寵物芳療與到府按摩服務。">
-<meta property="og:image" content="images/hero.jpg"> <meta property="og:url" content="https://chenasam.github.io/show-petbaby/">
+    <meta property="og:title" content="秀寶貝 - 到府寵物按摩與芳療">
+    <meta property="og:description" content="毛香御手職人手法，專業寵物芳療與到府按摩服務。">
+    <meta property="og:image" content="images/hero.jpg"> 
+    <meta property="og:url" content="https://chenasam.github.io/show-petbaby/">
 
     <meta name="description" content="秀寶貝提供專業寵物到府按摩、芳療服務與到府餵食清潔、洗澡服務。由顧問張靈汝親自到府，結合毛香御手職人手法與專業業務用精油，全方位守護毛孩身心健康。">
     <meta name="keywords" content="秀寶貝, 張靈汝, 寵物按摩, 到府寵物按摩, 寵物芳療, 毛香御手, 寵物健康生活顧問, 業務用精油, 寵物到府洗澡, 寵物餵食清潔, 寵物避邪淨化, 新北寵物按摩, 台北寵物按摩">
@@ -31,30 +32,26 @@
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
         
-        /* 基礎字體全面加大：電腦版 20px */
         body { 
             font-family: 'Noto Sans TC', sans-serif; 
             color: var(--dark-brown); 
             background-color: #FFFBFC; 
             line-height: 1.8; 
             scroll-behavior: smooth; 
-            font-size: 20px; 
+            font-size: 20px; /* 維持您要求的大字體 */
         }
         
         .container { max-width: var(--max-width); margin: 0 auto; padding: 0 20px; }
 
-        /* 導覽列 */
         header { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); padding: 0.8rem 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.03); }
         .nav-logo { height: 75px; width: auto; }
         
-        /* 導覽連結加大 */
         .nav-links { display: flex; gap: 30px; align-items: center; }
         .nav-links a { text-decoration: none; color: var(--dark-brown); font-size: 1.2rem; font-weight: 500; transition: 0.3s; } 
         .nav-links a:hover { color: var(--brand-pink); }
 
         #mobile-menu-btn { display: none; font-size: 2rem; color: var(--brand-pink); cursor: pointer; }
 
-        /* 主視覺：標題維持大氣 */
         .hero { 
             padding: 130px 20px; text-align: center; 
             background: linear-gradient(135deg, rgba(253, 231, 240, 0.7) 0%, rgba(255, 255, 255, 0.7) 100%), url('images/hero.jpg');
@@ -67,7 +64,6 @@
         .section { padding: 100px 0; } 
         .section-title { text-align: center; margin-bottom: 60px; color: var(--brand-pink); font-size: 2.5rem; font-weight: 700; letter-spacing: 2px; }
         
-        /* 價目表卡片文字加大 */
         .price-box { background: white; padding: 50px 40px; border-radius: 40px; box-shadow: var(--shadow); } 
         .price-header { color: var(--brand-pink); font-size: 1.7rem; font-weight: 900; border-left: 6px solid var(--brand-pink); padding-left: 20px; margin-bottom: 35px; }
         
@@ -75,7 +71,6 @@
         td { padding: 20px 10px; text-align: center; border-bottom: 1px solid #FDE7F0; font-size: 1.2rem; }
         .price-val { color: var(--brand-pink); font-weight: 900; }
 
-        /* 分類標題特別放大 */
         .product-category { font-weight: 900; color: var(--brand-pink); margin-top: 50px; font-size: 1.8rem; border-bottom: 2px solid var(--bg-light-pink); display: inline-block; padding-bottom: 5px; margin-bottom: 15px; } 
         .product-item { display: flex; justify-content: space-between; align-items: baseline; padding: 15px 0; font-size: 1.2rem; }
         .dots { flex-grow: 1; border-bottom: 2px dotted var(--accent-pink); margin: 0 15px; opacity: 0.4; }
@@ -83,53 +78,24 @@
         .card-img { width: 100%; border-radius: 30px; object-fit: cover; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
         .gold-icon { color: var(--gold); margin-right: 10px; font-size: 1.1rem; vertical-align: middle; }
 
-        .flow-container { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 30px; text-align: center; margin-top: 40px; }
-/* 幸福旅程箭頭樣式 */
-.flow-item {
-    flex: 1;
-    min-width: 200px;
-    position: relative;
-}
-
-/* 電腦版：向右箭頭 */
-.flow-item:not(:last-child)::after {
-    content: '\f061'; /* Font Awesome 向右箭頭 */
-    font-family: 'Font Awesome 6 Free';
-    font-weight: 900;
-    position: absolute;
-    top: 30px; /* 對齊圓圈中心 */
-    right: -15px;
-    color: var(--accent-pink);
-    font-size: 1.5rem;
-    opacity: 0.6;
-}
-
-/* 手機版：向下箭頭 */
-@media (max-width: 768px) {
-    .flow-item:not(:last-child)::after {
-        content: '\f063'; /* Font Awesome 向下箭頭 */
-        top: auto;
-        bottom: -25px;
-        left: 50%;
-        right: auto;
-        transform: translateX(-50%);
-    }
-}
+        /* 幸福旅程樣式整合 */
+        .flow-container { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; margin-top: 50px; }
+        .flow-step { flex: 1; text-align: center; padding: 0 10px; }
         .step-circle { width: 60px; height: 60px; background: var(--brand-pink); color: white; border-radius: 50%; display: flex; justify-content: center; align-items: center; margin: 0 auto 20px; font-weight: 900; font-size: 1.5rem; }
+        .flow-arrow { display: flex; align-items: center; justify-content: center; color: var(--accent-pink); font-size: 2.2rem; padding-top: 15px; opacity: 0.7; }
 
         .booking-btn { background: #06C755; color: white; padding: 20px 60px; border-radius: 60px; text-decoration: none; font-weight: 900; font-size: 1.5rem; display: inline-block; transition: 0.3s; box-shadow: 0 8px 20px rgba(6, 199, 85, 0.2); }
 
-        /* 動畫與功能樣式 */
         .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
         .reveal.active { opacity: 1; transform: translateY(0); }
         #backToTop { position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px; background-color: var(--brand-pink); color: white; border-radius: 50%; display: none; justify-content: center; align-items: center; cursor: pointer; z-index: 2000; box-shadow: 0 4px 15px rgba(0,0,0,0.2); transition: 0.3s; font-size: 1.5rem; }
 
-        @media (max-width: 992px) { .price-grid-dual { grid-template-columns: 1fr; } }
-        
+        section[id] { scroll-margin-top: 100px; }
+
+        /* 手機版適配 */
         @media (max-width: 768px) { 
-            body { font-size: 18px; } /* 手機版維持大字閱讀 */
+            body { font-size: 18px; }
             #mobile-menu-btn { display: block !important; }
-            
             .nav-links { 
                 display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background: white; padding: 30px; box-shadow: 0 15px 30px rgba(0,0,0,0.1); gap: 20px; z-index: 1000;
                 opacity: 0; visibility: hidden; transform: translateY(-10px); transition: all 0.4s ease;
@@ -138,13 +104,11 @@
             .nav-links a { font-size: 1.4rem; padding: 15px 0; }
             .hero h1 { font-size: 2.8rem; }
             .card-img { height: 280px !important; }
+
+            .flow-container { flex-direction: column; align-items: center; gap: 0; }
+            .flow-step { width: 100%; margin-bottom: 10px; }
+            .flow-arrow { padding: 25px 0; transform: rotate(90deg); }
         }
-
-/* 讓錨點跳轉時，上方預留空間給導覽列 */
-section[id] {
-    scroll-margin-top: 100px;
-}
-
     </style>
 </head>
 <body>
@@ -198,89 +162,34 @@ section[id] {
             </div>
         </section>
 
-<style>
-    /* 幸福旅程專屬樣式 */
-    .flow-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        flex-wrap: nowrap; /* 電腦版不換行 */
-        gap: 10px;
-        margin-top: 50px;
-    }
-
-    .flow-step {
-        flex: 1;
-        text-align: center;
-        padding: 0 10px;
-        min-width: 0; /* 防止內容撐開 */
-    }
-
-    /* 箭頭樣式：加大並設定間距 */
-    .flow-arrow {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--accent-pink);
-        font-size: 2.2rem; /* 箭頭加大 */
-        padding-top: 15px; /* 與圓圈中心對齊 */
-        opacity: 0.7;
-    }
-
-    /* 手機版自動切換為縱向 */
-    @media (max-width: 768px) {
-        .flow-container {
-            flex-direction: column;
-            align-items: center;
-            gap: 0;
-        }
-        .flow-step {
-            width: 100%;
-            margin-bottom: 10px;
-        }
-        .flow-arrow {
-            padding: 25px 0; /* 垂直排列時撐開間距，避免蓋到字 */
-            transform: rotate(90deg); /* 箭頭轉向下方 */
-        }
-    }
-</style>
-
-<section id="flow" class="section reveal">
-    <h2 class="section-title">幸福旅程</h2>
-    <div class="container">
-        <div class="flow-container">
-            <div class="flow-step">
-                <div class="step-circle">1</div>
-                <h4 style="color: var(--brand-pink); margin-bottom: 12px; font-size: 1.5rem;">預約諮詢</h4>
-                <p style="font-size: 1.1rem; line-height: 1.4;">了解寵物性格與禁忌</p>
+        <section id="flow" class="section reveal">
+            <h2 class="section-title">幸福旅程</h2>
+            <div class="flow-container">
+                <div class="flow-step">
+                    <div class="step-circle">1</div>
+                    <h4 style="color: var(--brand-pink); margin-bottom: 12px; font-size: 1.5rem;">預約諮詢</h4>
+                    <p style="font-size: 1.1rem; line-height: 1.4;">了解寵物性格與禁忌</p>
+                </div>
+                <div class="flow-arrow"><i class="fas fa-chevron-right"></i></div>
+                <div class="flow-step">
+                    <div class="step-circle">2</div>
+                    <h4 style="color: var(--brand-pink); margin-bottom: 12px; font-size: 1.5rem;">建立信任</h4>
+                    <p style="font-size: 1.1rem; line-height: 1.4;">先親切打招呼，不急著服務</p>
+                </div>
+                <div class="flow-arrow"><i class="fas fa-chevron-right"></i></div>
+                <div class="flow-step">
+                    <div class="step-circle">3</div>
+                    <h4 style="color: var(--brand-pink); margin-bottom: 12px; font-size: 1.5rem;">專業按摩</h4>
+                    <p style="font-size: 1.1rem; line-height: 1.4;">手法細膩，同步觀察與聊天</p>
+                </div>
+                <div class="flow-arrow"><i class="fas fa-chevron-right"></i></div>
+                <div class="flow-step">
+                    <div class="step-circle">4</div>
+                    <h4 style="color: var(--brand-pink); margin-bottom: 12px; font-size: 1.5rem;">狀態回報</h4>
+                    <p style="font-size: 1.1rem; line-height: 1.4;">讓飼主了解孩子的生活習慣</p>
+                </div>
             </div>
-
-            <div class="flow-arrow"><i class="fas fa-chevron-right"></i></div>
-
-            <div class="flow-step">
-                <div class="step-circle">2</div>
-                <h4 style="color: var(--brand-pink); margin-bottom: 12px; font-size: 1.5rem;">建立信任</h4>
-                <p style="font-size: 1.1rem; line-height: 1.4;">先親切打招呼，不急著服務</p>
-            </div>
-
-            <div class="flow-arrow"><i class="fas fa-chevron-right"></i></div>
-
-            <div class="flow-step">
-                <div class="step-circle">3</div>
-                <h4 style="color: var(--brand-pink); margin-bottom: 12px; font-size: 1.5rem;">專業按摩</h4>
-                <p style="font-size: 1.1rem; line-height: 1.4;">手法細膩，同步觀察與聊天</p>
-            </div>
-
-            <div class="flow-arrow"><i class="fas fa-chevron-right"></i></div>
-
-            <div class="flow-step">
-                <div class="step-circle">4</div>
-                <h4 style="color: var(--brand-pink); margin-bottom: 12px; font-size: 1.5rem;">狀態回報</h4>
-                <p style="font-size: 1.1rem; line-height: 1.4;">讓飼主了解孩子的生活習慣</p>
-            </div>
-        </div>
-    </div>
-</section>
+        </section>
 
         <section id="prices" class="section reveal">
             <h2 class="section-title">寵愛提案</h2>
@@ -296,23 +205,24 @@ section[id] {
                     <div class="product-item"><span>新北市到府餵食 / 清潔</span><span class="dots"></span><span class="price-val">$800</span></div>
                     <div class="product-item"><span>到府香香 (洗澡 - 5kg以下)</span><span class="dots"></span><span class="price-val">$1000</span></div>
                     <div class="product-item"><span>到府香香 (洗澡 - 5-10kg)</span><span class="dots"></span><span class="price-val">$1500</span></div>
-                    <img src="images/products.jpg" alt="服務實拍" class="card-img" style="height: 400px; margin-top: 45px;" onerror="this.style.display='none'">
+                    <img src="images/products.jpg" alt="服務實拍" class="card-img" style="height: 450px; margin-top: 45px;" onerror="this.style.display='none'">
                 </div>
 
                 <div class="price-box">
                     <div class="price-header">精選產品價目表</div> 
                     <p class="product-category">寵物芳療精油</p>
-                    <div class="product-item"><span>情緒／呼吸 (10ml)</span><span class="dots"></span><span class="price-val">$1,000</span></div>
-                    <div class="product-item"><span>氣喘／拉傷 (10ml)</span><span class="dots"></span><span class="price-val">$1,500</span></div>
+                    <div class="product-item"><span>情緒／呼吸</span><span class="price-val"></span></div>
+                    <div class="product-item"><span>10 ml</span><span class="dots"></span><span class="price-val">$1,000</span></div>
+                    <div class="product-item"><span>15 ml</span><span class="dots"></span><span class="price-val">$1,300</span></div>
+                    <div class="product-item"><span>氣喘／拉傷</span><span class="price-val"></span></div>
+                    <div class="product-item"><span>10 ml</span><span class="dots"></span><span class="price-val">$1,500</span></div>
+                    <div class="product-item"><span>15 ml</span><span class="dots"></span><span class="price-val">$1,800</span></div>
                     <p class="product-category">精選業務用油</p>
                     <div class="product-item"><span><i class="fas fa-shield-alt gold-icon"></i>避邪擋煞</span><span class="price-val"></span></div>
-                    <div class="product-item"><span>分享罐</span><span class="dots"></span><span class="price-val">$300</span></div>
                     <div class="product-item"><span>5 ml</span><span class="dots"></span><span class="price-val">$900</span></div>
                     <div class="product-item"><span>10 ml</span><span class="dots"></span><span class="price-val">$1,300</span></div>
                     <div class="product-item"><span>15 ml</span><span class="dots"></span><span class="price-val">$1,800</span></div>
-
                     <div class="product-item"><span><i class="fas fa-coins gold-icon"></i>招財納福</span><span class="price-val"></span></div>
-                    <div class="product-item"><span>分享罐</span><span class="dots"></span><span class="price-val">$500</span></div>
                     <div class="product-item"><span>5 ml</span><span class="dots"></span><span class="price-val">$1,188</span></div>
                     <div class="product-item"><span>10 ml</span><span class="dots"></span><span class="price-val">$1,988</span></div>
                 </div>
@@ -322,40 +232,51 @@ section[id] {
         <section id="faq" class="reveal" style="padding: 100px 0;">
             <h2 class="section-title">貼心解惑</h2>
             <div style="background: white; border-radius: 20px; padding: 35px; margin-bottom: 25px; box-shadow: var(--shadow); border-left: 8px solid var(--brand-pink);">
+                <div style="font-weight: 700; color: var(--brand-pink); margin-bottom: 15px; font-size: 1.4rem;"><i class="fas fa-heart" style="margin-right: 10px;"></i> 平常我也會摸摸牠，為什麼還需要專業按摩師？</div>
+                <p style="font-size: 1.2rem;">您的摸摸是愛，專業按摩則是深度的健康守護。 透過「毛香御手」的專業手法，我們能精準觸及平常忽略的緊繃肌肉，並結合精油的能量支持。這是讓「愛」與「科學照顧」結合，給寶貝更完整的寵愛。</p>
+            </div>
+            <div style="background: white; border-radius: 20px; padding: 35px; margin-bottom: 25px; box-shadow: var(--shadow); border-left: 8px solid var(--brand-pink);">
                 <div style="font-weight: 700; color: var(--brand-pink); margin-bottom: 15px; font-size: 1.4rem;"><i class="fas fa-paw" style="margin-right: 10px;"></i> 精油對毛孩安全嗎？</div>
-                <p style="font-size: 1.2rem;">身為專業顧問，我選用精油皆經嚴格篩選，並依毛孩狀況調配安全濃度。</p>
+                <p style="font-size: 1.2rem;">是的，專業引導是安全的關鍵！ 透過嚴格篩選與客製化濃度調整，我確保毛孩在享受芳療與按摩的同時，獲得最純淨、無負擔的天然照護。</p>
             </div>
             <div style="background: white; border-radius: 20px; padding: 35px; margin-bottom: 25px; box-shadow: var(--shadow); border-left: 8px solid var(--brand-pink);">
                 <div style="font-weight: 700; color: var(--brand-pink); margin-bottom: 15px; font-size: 1.4rem;"><i class="fas fa-heart" style="margin-right: 10px;"></i> 寶貝怕生怎麼辦？</div>
-                <p style="font-size: 1.2rem;">「毛香御手」的核心在於建立信任。我會先與寶貝聊天、打招呼，尊重牠們的意願，絕不強迫按摩。</p>
+                <p style="font-size: 1.2rem;">尊重意願，是「毛香御手」最核心的堅持。 我會優先建立彼此的信任連結，讓寶貝在完全安心的狀態下享受按摩，絕不勉強，只給寶貝最好的。</p>
             </div>
+            <div style="background: white; border-radius: 20px; padding: 35px; margin-bottom: 25px; box-shadow: var(--shadow); border-left: 8px solid var(--brand-pink);">
+                <div style="font-weight: 700; color: var(--brand-pink); margin-bottom: 15px; font-size: 1.4rem;"><i class="fas fa-paw" style="margin-right: 10px;"></i> 家裡空間不大，也可以進行到府按摩嗎？</div>
+                <p style="font-size: 1.2rem;">沒問題！熟悉的地方就是最好的療癒室。 只要有一個讓寶貝能放鬆躺下的角落，我們就能開啟這場專屬的身心旅程。在熟悉的家，寶貝的壓力最小，吸收效果也最好。</p>
+            </div>
+            <div style="background: white; border-radius: 20px; padding: 35px; margin-bottom: 25px; box-shadow: var(--shadow); border-left: 8px solid var(--brand-pink);">
+                <div style="font-weight: 700; color: var(--brand-pink); margin-bottom: 15px; font-size: 1.4rem;"><i class="fas fa-heart" style="margin-right: 10px;"></i> 我家毛孩年紀很大了（或有關節問題），適合按摩嗎？</div>
+                <p style="font-size: 1.2rem;">這正是高齡寶貝最需要的溫柔支持。 專業按摩能幫助老孩子舒緩肌肉緊繃、促進循環。我會針對寶貝當下的身體狀況，調整最輕柔的力道與合適的精油，讓牠感受無負擔的舒適。</p>
+            </div>
+            <div style="background: white; border-radius: 20px; padding: 35px; margin-bottom: 25px; box-shadow: var(--shadow); border-left: 8px solid var(--brand-pink);">
+                <div style="font-weight: 700; color: var(--brand-pink); margin-bottom: 15px; font-size: 1.4rem;"><i class="fas fa-paw" style="margin-right: 10px;"></i> 按摩完之後，毛孩會有什麼反應呢？</div>
+                <p style="font-size: 1.2rem;">最常見的反應是「睡得很香甜」。 就像我們做完 SPA 一樣，毛孩會進入深層放鬆狀態。這代表身心壓力得到了釋放，是身體啟動自我修復與排解壓力的正向表現喔！</p>
+            </div>
+
         </section>
 
         <section id="booking" class="reveal" style="text-align: center; padding: 120px 20px; background: white; border-radius: 60px; margin-bottom: 80px; box-shadow: var(--shadow);">
-    <h2 style="color: var(--brand-pink); font-size: 2.4rem; margin-bottom: 25px; font-weight: 900;">預約秀寶貝服務</h2>
-    <p style="font-size: 1.2rem; color: #666;">想給寶貝一份深深的愛嗎？點擊下方按鈕，立即展開諮詢。</p>
-    <p style="font-size: 1.2rem; margin-top: 5px; color: #666;">每一份按摩，都是一次建立信任與健康的契機。</p> 
-    
-    <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 35px;">
-        <a href="https://line.me/ti/p/wWB_WTEESk" class="booking-btn" style="margin-top: 0;">
-            <i class="fab fa-line" style="margin-right: 10px;"></i> 立即 LINE 預約
-        </a>
-        
-        <a href="https://www.facebook.com/show.petbaby" target="_blank" class="booking-btn" style="margin-top: 0; background: #1877F2;">
-            <i class="fab fa-facebook" style="margin-right: 10px;"></i> 關注粉絲專頁
-        </a>
-    </div>
-</section>
+            <h2 style="color: var(--brand-pink); font-size: 2.4rem; margin-bottom: 25px; font-weight: 900;">預約秀寶貝服務</h2>
+            <p style="font-size: 1.2rem; color: #666;">想給寶貝一份深深的愛嗎？點擊下方按鈕，立即展開諮詢。</p>
+            <p style="font-size: 1.2rem; margin-top: 5px; color: #666;">每一份按摩，都是一次建立信任與健康的契機。</p> 
 
+            <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 35px;">
+                <a href="https://line.me/ti/p/wWB_WTEESk" class="booking-btn"><i class="fab fa-line" style="margin-right: 10px;"></i> 立即 LINE 預約</a>
+                <a href="https://www.facebook.com/show.petbaby" target="_blank" class="booking-btn" style="background: #1877F2;"><i class="fab fa-facebook" style="margin-right: 10px;"></i> 關注粉絲專頁</a>
+            </div>
+        </section>
     </main>
 
     <footer style="background: var(--bg-light-pink); padding: 80px 20px; text-align: center; border-top-left-radius: 60px; border-top-right-radius: 60px;">
-        <img src="images/logo.png" alt="秀寶貝" style="height: 200px; margin-bottom: 20px;" onerror="this.style.display='none'"> 
+        <img src="images/logo.png" alt="秀寶貝" style="height: clamp(100px, 20vw, 150px); width: auto; margin-bottom: 20px;" onerror="this.style.display='none'"> 
         <div style="margin-top: 30px; display: flex; justify-content: center; gap: 35px;">
             <a href="https://www.facebook.com/show.petbaby" target="_blank" style="color: var(--brand-pink); font-size: 3rem;"><i class="fab fa-facebook"></i></a>
             <a href="https://line.me/ti/p/wWB_WTEESk" target="_blank" style="color: var(--brand-pink); font-size: 3rem;"><i class="fab fa-line"></i></a>
         </div>
-        <p style="font-size: 1rem; opacity: 0.7; margin-top: 40px;">&copy; 2026 Show Baby Pet Massage Service. All Rights Reserved.</p>
+        <p style="font-size: 1rem; opacity: 0.7; margin-top: 40px;">&copy; 2026 Show Pet Baby Massage Service. All Rights Reserved.</p>
     </footer>
 
     <div id="backToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'});"><i class="fas fa-chevron-up"></i></div>
