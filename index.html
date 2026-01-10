@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>秀寶貝 - 到府寵物按摩與芳療 | 寵物健康生活顧問 張靈汝</title>
     
+<meta property="og:title" content="秀寶貝 - 到府寵物按摩與芳療">
+<meta property="og:description" content="毛香御手職人手法，專業寵物芳療與到府按摩服務。">
+<meta property="og:image" content="images/hero.jpg"> <meta property="og:url" content="https://chenasam.github.io/show-petbaby/">
+
     <meta name="description" content="秀寶貝提供專業寵物到府按摩、芳療服務與到府餵食清潔、洗澡服務。由顧問張靈汝親自到府，結合毛香御手職人手法與專業業務用精油，全方位守護毛孩身心健康。">
     <meta name="keywords" content="秀寶貝, 張靈汝, 寵物按摩, 到府寵物按摩, 寵物芳療, 毛香御手, 寵物健康生活顧問, 業務用精油, 寵物到府洗澡, 寵物餵食清潔, 寵物避邪淨化, 新北寵物按摩, 台北寵物按摩">
     
@@ -80,6 +84,37 @@
         .gold-icon { color: var(--gold); margin-right: 10px; font-size: 1.1rem; vertical-align: middle; }
 
         .flow-container { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 30px; text-align: center; margin-top: 40px; }
+/* 幸福旅程箭頭樣式 */
+.flow-item {
+    flex: 1;
+    min-width: 200px;
+    position: relative;
+}
+
+/* 電腦版：向右箭頭 */
+.flow-item:not(:last-child)::after {
+    content: '\f061'; /* Font Awesome 向右箭頭 */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    top: 30px; /* 對齊圓圈中心 */
+    right: -15px;
+    color: var(--accent-pink);
+    font-size: 1.5rem;
+    opacity: 0.6;
+}
+
+/* 手機版：向下箭頭 */
+@media (max-width: 768px) {
+    .flow-item:not(:last-child)::after {
+        content: '\f063'; /* Font Awesome 向下箭頭 */
+        top: auto;
+        bottom: -25px;
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+    }
+}
         .step-circle { width: 60px; height: 60px; background: var(--brand-pink); color: white; border-radius: 50%; display: flex; justify-content: center; align-items: center; margin: 0 auto 20px; font-weight: 900; font-size: 1.5rem; }
 
         .booking-btn { background: #06C755; color: white; padding: 20px 60px; border-radius: 60px; text-decoration: none; font-weight: 900; font-size: 1.5rem; display: inline-block; transition: 0.3s; box-shadow: 0 8px 20px rgba(6, 199, 85, 0.2); }
@@ -104,6 +139,12 @@
             .hero h1 { font-size: 2.8rem; }
             .card-img { height: 280px !important; }
         }
+
+/* 讓錨點跳轉時，上方預留空間給導覽列 */
+section[id] {
+    scroll-margin-top: 100px;
+}
+
     </style>
 </head>
 <body>
@@ -157,15 +198,89 @@
             </div>
         </section>
 
-        <section id="flow" class="section reveal">
-            <h2 class="section-title">幸福旅程</h2>
-            <div class="flow-container">
-                <div style="flex: 1; min-width: 200px;"><div class="step-circle">1</div><h4 style="color: var(--brand-pink); margin-bottom: 15px; font-size: 1.4rem;">預約諮詢</h4><p>了解寵物性格與禁忌</p></div>
-                <div style="flex: 1; min-width: 200px;"><div class="step-circle">2</div><h4 style="color: var(--brand-pink); margin-bottom: 15px; font-size: 1.4rem;">建立信任</h4><p>先親切打招呼，不急著服務</p></div> 
-                <div style="flex: 1; min-width: 200px;"><div class="step-circle">3</div><h4 style="color: var(--brand-pink); margin-bottom: 15px; font-size: 1.4rem;">專業按摩</h4><p>手法細膩，同步觀察與聊天</p></div> 
-                <div style="flex: 1; min-width: 200px;"><div class="step-circle">4</div><h4 style="color: var(--brand-pink); margin-bottom: 15px; font-size: 1.4rem;">狀態回報</h4><p>讓飼主了解孩子的生活習慣</p></div> 
+<style>
+    /* 幸福旅程專屬樣式 */
+    .flow-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: nowrap; /* 電腦版不換行 */
+        gap: 10px;
+        margin-top: 50px;
+    }
+
+    .flow-step {
+        flex: 1;
+        text-align: center;
+        padding: 0 10px;
+        min-width: 0; /* 防止內容撐開 */
+    }
+
+    /* 箭頭樣式：加大並設定間距 */
+    .flow-arrow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--accent-pink);
+        font-size: 2.2rem; /* 箭頭加大 */
+        padding-top: 15px; /* 與圓圈中心對齊 */
+        opacity: 0.7;
+    }
+
+    /* 手機版自動切換為縱向 */
+    @media (max-width: 768px) {
+        .flow-container {
+            flex-direction: column;
+            align-items: center;
+            gap: 0;
+        }
+        .flow-step {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .flow-arrow {
+            padding: 25px 0; /* 垂直排列時撐開間距，避免蓋到字 */
+            transform: rotate(90deg); /* 箭頭轉向下方 */
+        }
+    }
+</style>
+
+<section id="flow" class="section reveal">
+    <h2 class="section-title">幸福旅程</h2>
+    <div class="container">
+        <div class="flow-container">
+            <div class="flow-step">
+                <div class="step-circle">1</div>
+                <h4 style="color: var(--brand-pink); margin-bottom: 12px; font-size: 1.5rem;">預約諮詢</h4>
+                <p style="font-size: 1.1rem; line-height: 1.4;">了解寵物性格與禁忌</p>
             </div>
-        </section>
+
+            <div class="flow-arrow"><i class="fas fa-chevron-right"></i></div>
+
+            <div class="flow-step">
+                <div class="step-circle">2</div>
+                <h4 style="color: var(--brand-pink); margin-bottom: 12px; font-size: 1.5rem;">建立信任</h4>
+                <p style="font-size: 1.1rem; line-height: 1.4;">先親切打招呼，不急著服務</p>
+            </div>
+
+            <div class="flow-arrow"><i class="fas fa-chevron-right"></i></div>
+
+            <div class="flow-step">
+                <div class="step-circle">3</div>
+                <h4 style="color: var(--brand-pink); margin-bottom: 12px; font-size: 1.5rem;">專業按摩</h4>
+                <p style="font-size: 1.1rem; line-height: 1.4;">手法細膩，同步觀察與聊天</p>
+            </div>
+
+            <div class="flow-arrow"><i class="fas fa-chevron-right"></i></div>
+
+            <div class="flow-step">
+                <div class="step-circle">4</div>
+                <h4 style="color: var(--brand-pink); margin-bottom: 12px; font-size: 1.5rem;">狀態回報</h4>
+                <p style="font-size: 1.1rem; line-height: 1.4;">讓飼主了解孩子的生活習慣</p>
+            </div>
+        </div>
+    </div>
+</section>
 
         <section id="prices" class="section reveal">
             <h2 class="section-title">寵愛提案</h2>
