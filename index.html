@@ -190,6 +190,11 @@
         .guidance-box { margin-top: 60px; padding: clamp(25px, 5vw, 50px); background-color: var(--bg-light-pink); border-radius: 40px; text-align: center; box-shadow: var(--shadow); border: 2px dashed var(--brand-pink); width: 100%; }
         .booking-btn { background: #06C755; color: white; padding: 20px 60px; border-radius: 60px; text-decoration: none; font-weight: 900; font-size: 1.5rem; display: inline-block; transition: 0.3s; box-shadow: 0 8px 20px rgba(6, 199, 85, 0.2); }
 
+        /* QA 專屬收合樣式 */
+        details { cursor: pointer; outline: none; }
+        summary { list-style: none; outline: none; }
+        summary::-webkit-details-marker { display: none; }
+
         .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
         .reveal.active { opacity: 1; transform: translateY(0); }
         #backToTop { position: fixed; bottom: 30px; right: 20px; width: 55px; height: 55px; background-color: var(--brand-pink); color: white; border-radius: 50%; display: none; justify-content: center; align-items: center; cursor: pointer; z-index: 2000; box-shadow: 0 4px 15px rgba(0,0,0,0.2); transition: 0.3s; font-size: 1.4rem; }
@@ -329,7 +334,6 @@
 
     </div>
 </section>
-</section>
 
         <section id="flow" class="section reveal">
             <h2 class="section-title">幸福旅程</h2>
@@ -395,30 +399,37 @@
 
         <section id="faq" class="reveal" style="padding: 100px 0;">
             <h2 class="section-title">貼心解惑</h2>
-            <div style="background: white; border-radius: 20px; padding: 35px; margin-bottom: 25px; box-shadow: var(--shadow); border-left: 8px solid var(--brand-pink);">
-                <div style="font-weight: 700; color: var(--brand-pink); margin-bottom: 15px; font-size: 1.4rem;"><i class="fas fa-heart" style="margin-right: 10px;"></i> 平常我也會摸摸牠，為什麼還需要專業按摩師？</div>
-                <p style="font-size: 1.2rem;">您的摸摸是愛，專業按摩則是深度的健康守護。 透過「毛香御手」的專業手法，我們能精準觸及平常忽略的緊繃肌肉，並結合精油的能量支持。這是讓「愛」與「科學照顧」結合，給寶貝更完整的寵愛。</p>
-            </div>
-            <div style="background: white; border-radius: 20px; padding: 35px; margin-bottom: 25px; box-shadow: var(--shadow); border-left: 8px solid var(--brand-pink);">
-                <div style="font-weight: 700; color: var(--brand-pink); margin-bottom: 15px; font-size: 1.4rem;"><i class="fas fa-paw" style="margin-right: 10px;"></i> 精油對毛孩安全嗎？</div>
-                <p style="font-size: 1.2rem;">是的，專業引導是安全的關鍵！ 透過嚴格篩選與客製化濃度調整，我確保毛孩在享受芳療與按摩的同時，獲得最純淨、無負擔的天然照護。</p>
-            </div>
-            <div style="background: white; border-radius: 20px; padding: 35px; margin-bottom: 25px; box-shadow: var(--shadow); border-left: 8px solid var(--brand-pink);">
-                <div style="font-weight: 700; color: var(--brand-pink); margin-bottom: 15px; font-size: 1.4rem;"><i class="fas fa-heart" style="margin-right: 10px;"></i> 寶貝怕生怎麼辦？</div>
-                <p style="font-size: 1.2rem;">尊重意願，是「毛香御手」最核心的堅持。 我會先與寶貝聊天、打招呼，尊重牠們的意願，絕不勉強，只給寶貝最好的。</p>
-            </div>
-            <div style="background: white; border-radius: 20px; padding: 35px; margin-bottom: 25px; box-shadow: var(--shadow); border-left: 8px solid var(--brand-pink);">
-                <div style="font-weight: 700; color: var(--brand-pink); margin-bottom: 15px; font-size: 1.4rem;"><i class="fas fa-paw" style="margin-right: 10px;"></i> 家裡空間不大，也可以進行到府按摩嗎？</div>
-                <p style="font-size: 1.2rem;">沒問題！熟悉的地方就是最好的療癒室。 只要有一個讓寶貝能放鬆躺下的角落，我們就能開啟這場專屬的身心旅程。在熟悉的家，寶貝的壓力最小，吸收效果也最好。</p>
-            </div>
-            <div style="background: white; border-radius: 20px; padding: 35px; margin-bottom: 25px; box-shadow: var(--shadow); border-left: 8px solid var(--brand-pink);">
-                <div style="font-weight: 700; color: var(--brand-pink); margin-bottom: 15px; font-size: 1.4rem;"><i class="fas fa-heart" style="margin-right: 10px;"></i> 我家毛孩年紀很大了（或有關節問題），適合按摩嗎？</div>
-                <p style="font-size: 1.2rem;">這正是高齡寶貝最需要的溫柔支持。 專業按摩能幫助老孩子舒緩肌肉緊繃、促進循環。我會針對寶貝當下的身體狀況，調整最輕柔的力道與合適的精油，讓牠感受無負擔的舒適。</p>
-            </div>
-            <div style="background: white; border-radius: 20px; padding: 35px; margin-bottom: 25px; box-shadow: var(--shadow); border-left: 8px solid var(--brand-pink);">
-                <div style="font-weight: 700; color: var(--brand-pink); margin-bottom: 15px; font-size: 1.4rem;"><i class="fas fa-paw" style="margin-right: 10px;"></i> 按摩完之後，毛孩會有什麼反應呢？</div>
-                <p style="font-size: 1.2rem;">最常見的反應是「睡得很香甜」。 就像我們做完 SPA 一樣，毛孩會進入深層放鬆狀態。這代表身心壓力得到了釋放，是身體啟動自我修復與排解壓力的正向表現喔！</p>
-            </div>
+            
+            <details style="background: white; border-radius: 20px; padding: 35px; margin-bottom: 25px; box-shadow: var(--shadow); border-left: 8px solid var(--brand-pink);">
+                <summary style="font-weight: 700; color: var(--brand-pink); font-size: 1.4rem;"><i class="fas fa-heart" style="margin-right: 10px;"></i> 平常我也會摸摸牠，為什麼還需要專業按摩師？</summary>
+                <p style="font-size: 1.2rem; margin-top: 15px;">您的摸摸是愛，專業按摩則是深度的健康守護。 透過「毛香御手」的專業手法，我們能精準觸及平常忽略的緊繃肌肉，並結合精油的能量支持。這是讓「愛」與「科學照顧」結合，給寶貝更完整的寵愛。</p>
+            </details>
+
+            <details style="background: white; border-radius: 20px; padding: 35px; margin-bottom: 25px; box-shadow: var(--shadow); border-left: 8px solid var(--brand-pink);">
+                <summary style="font-weight: 700; color: var(--brand-pink); font-size: 1.4rem;"><i class="fas fa-paw" style="margin-right: 10px;"></i> 精油對毛孩安全嗎？</summary>
+                <p style="font-size: 1.2rem; margin-top: 15px;">是的，專業引導是安全的關鍵！ 透過嚴格篩選與客製化濃度調整，我確保毛孩在享受芳療與按摩的同時，獲得最純淨、無負擔的天然照護。</p>
+            </details>
+
+            <details style="background: white; border-radius: 20px; padding: 35px; margin-bottom: 25px; box-shadow: var(--shadow); border-left: 8px solid var(--brand-pink);">
+                <summary style="font-weight: 700; color: var(--brand-pink); font-size: 1.4rem;"><i class="fas fa-heart" style="margin-right: 10px;"></i> 寶貝怕生怎麼辦？</summary>
+                <p style="font-size: 1.2rem; margin-top: 15px;">尊重意願，是「毛香御手」最核心的堅持。 我會先與寶貝聊天、打招呼，尊重牠們的意願，絕不勉強，只給寶貝最好的。</p>
+            </details>
+
+            <details style="background: white; border-radius: 20px; padding: 35px; margin-bottom: 25px; box-shadow: var(--shadow); border-left: 8px solid var(--brand-pink);">
+                <summary style="font-weight: 700; color: var(--brand-pink); font-size: 1.4rem;"><i class="fas fa-paw" style="margin-right: 10px;"></i> 家裡空間不大，也可以進行到府按摩嗎？</summary>
+                <p style="font-size: 1.2rem; margin-top: 15px;">沒問題！熟悉的地方就是最好的療癒室。 只要有一個讓寶貝能放鬆躺下的角落，我們就能開啟這場專屬的身心旅程。在熟悉的家，寶貝的壓力最小，吸收效果也最好。</p>
+            </details>
+
+            <details style="background: white; border-radius: 20px; padding: 35px; margin-bottom: 25px; box-shadow: var(--shadow); border-left: 8px solid var(--brand-pink);">
+                <summary style="font-weight: 700; color: var(--brand-pink); font-size: 1.4rem;"><i class="fas fa-heart" style="margin-right: 10px;"></i> 我家毛孩年紀很大了（或有關節問題），適合按摩嗎？</summary>
+                <p style="font-size: 1.2rem; margin-top: 15px;">這正是高齡寶貝最需要的溫柔支持。 專業按摩能幫助老孩子舒緩肌肉緊繃、促進循環。我會針對寶貝當下的身體狀況，調整最輕柔的力道與合適的精油，讓牠感受無負擔的舒適。</p>
+            </details>
+
+            <details style="background: white; border-radius: 20px; padding: 35px; margin-bottom: 25px; box-shadow: var(--shadow); border-left: 8px solid var(--brand-pink);">
+                <summary style="font-weight: 700; color: var(--brand-pink); font-size: 1.4rem;"><i class="fas fa-paw" style="margin-right: 10px;"></i> 按摩完之後，毛孩會有什麼反應呢？</summary>
+                <p style="font-size: 1.2rem; margin-top: 15px;">最常見的反應是「睡得很香甜」。 就像我們做完 SPA 一樣，毛孩會進入深層放鬆狀態。這代表身心壓力得到了釋放，是身體啟動自我修復與排解壓力的正向表現喔！</p>
+            </details>
+
         </section>
 
         <section id="booking" class="reveal" style="text-align: center; padding: 120px 20px; background: white; border-radius: 60px; margin-bottom: 80px; box-shadow: var(--shadow);">
@@ -477,4 +488,3 @@
     </script>
 </body>
 </html>
-
